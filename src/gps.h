@@ -125,6 +125,19 @@ typedef struct {
     ubx_nav_svinfo_channel channel[16];         // 16 satellites * 12 byte
 } __attribute__((__packed__)) ubx_nav_svinfo;
 
+typedef struct {
+    uint32_t time;              // GPS msToW
+    uint32_t time_acc;
+    int32_t nanoseconds;
+    uint16_t year;
+    uint8_t month;
+    uint8_t day;
+    uint8_t hour;
+    uint8_t min;
+    uint8_t sec;
+    uint8_t flag;
+} __attribute__((__packed__)) ubx_nav_timeutc;
+
 struct __attribute__((__packed__)) casic_nav_pv_info {
     uint16_t header;              // Header = 0xBA 0XCE
     uint16_t length;              // length of payload 80 = 0X50
@@ -174,6 +187,7 @@ struct __attribute__((__packed__)) casic_nav_pv_info {
 #define    MSG_CFG_PRT  0x00
 #define    MSG_CFG_RATE  0x08
 #define    MSG_CFG_SET_RATE  0x01
+#define    MSG_TIMEUTC  0x21
 #define    MSG_CFG_NAV_SETTINGS  0x24
 
 #define    FIX_NONE  0
