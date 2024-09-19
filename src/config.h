@@ -194,6 +194,7 @@
 //                        this can be done using a FTDI and program GnssToolkit3.exe (to download from internet)
 
 // --------- Parameter for RPM -------------------
+#define DISABLE_PULLS true
 #define RPM_COUNTER_INTERVAL_USEC 100000 // in usec (so 100000 = 100 msec)
 
 // --------- Parameters for Ads1115 ----------------
@@ -301,29 +302,29 @@
  #define _pinChannels_14  0XFF
  #define _pinChannels_15  0XFF
  #define _pinChannels_16  0XFF
- #define _pinGpsTx  0XFF
- #define _pinGpsRx  0XFF
- #define _pinPrimIn  0XFF
+ #define _pinGpsTx  0X02
+ #define _pinGpsRx  0X01
+ #define _pinPrimIn  0X05
  #define _pinSecIn  0XFF 
  #define _pinSbusOut  0XFF
- #define _pinTlm  0XFF
- #define _pinVolt_1  0XFF
- #define _pinVolt_2  0XFF
- #define _pinVolt_3  0XFF
+ #define _pinTlm  0X04
+ #define _pinVolt_1  0X1C
+ #define _pinVolt_2  0X1B
+ #define _pinVolt_3  0X1D
  #define _pinVolt_4  0XFF
- #define _pinSda  0XFF
- #define _pinScl  0XFF
- #define _pinRpm  0XFF
+ #define _pinSda  0X0A
+ #define _pinScl  0X0F
+ #define _pinRpm  0X09
  #define _pinLed  16
  #define _protocol  'S' // S = Sport, C = crossfire, J = Jeti
  #define _crsfBaudrate  420000
- #define _scaleVolt1  1.0
- #define _scaleVolt2  1.0
- #define _scaleVolt3  1.0
+ #define _scaleVolt1  6.85636856368564
+ #define _scaleVolt2  99.009900990099
+ #define _scaleVolt3  0.1
  #define _scaleVolt4  1.0
- #define _offset1  0.0
- #define _offset2  0.0
- #define _offset3  0.0
+ #define _offset1  68.5636856368562
+ #define _offset2  168331.187500
+ #define _offset3  50
  #define _offset4  0.0
  #define _gpsType  'U' 
  #define _rpmMultiplicator 1.0
@@ -335,7 +336,7 @@
 // #define _gyroOffsetX;
 // #define _gyroOffsetY;
 // #define _gyroOffsetZ;
-#define _temperature 0XFF
+#define _temperature 0X01
 #define _VspeedCompChannel 0XFF
 #define _ledInverted 'N'
 #define _pinLogger 0xFF
