@@ -176,7 +176,7 @@ void printHelp(){
     printf("  GPS Rx                    GPS_RX  = 0, 1, 2, ..., 29\n");
     printf("  GPS Tx                    GPS_TX  = 0, 1, 2, ..., 29\n");
     printf("  Sbus OUT                  SBUS_OUT= 0, 1, 2, ..., 29\n");
-    printf("  RPM (only for Sport)      RPM     = 0, 1, 2, ..., 29\n");
+    printf("  RPM                       RPM     = 0, 1, 2, ..., 29\n");
     printf("  SDA (baro sensor)         SDA     = 2, 6, 10, 14, 18, 22, 26\n");
     printf("  SCL (baro sensor)         SCL     = 3, 7, 11, 15, 19, 23, 27\n");
     printf("  PWM Channels 1, ..., 16   C1 / C16= 0, 1, 2, ..., 15\n");
@@ -3028,7 +3028,7 @@ void dumpConfig(){
     if (config.pinLogger  != 255) printf("LOGBAUD = %i;\n", config.loggerBaudrate );
     if (config.pwmHz != 0XFFFF) printf("PWMHZ = %i;\n", config.pwmHz );
     printf("SCALE1 = %f; SCALE2 = %f; SCALE3 = %f; SCALE4 = %f; \n", config.scaleVolt1, config.scaleVolt2, config.scaleVolt3, config.scaleVolt4);
-    printf("OFFSET1 = %f; OFFSET2 = %f; OFFSET3 = %f; OFFSET = %f; \n", config.offset1, config.offset2, config.offset3, config.offset4);
+    printf("OFFSET1 = %f; OFFSET2 = %f; OFFSET3 = %f; OFFSET4 = %f; \n", config.offset1, config.offset2, config.offset3, config.offset4);
     
     if (config.temperature != 255) printf("TEMP = %i;\n", config.temperature );
     if (config.gpsType == 'U') printf("GPS = U;\n");
