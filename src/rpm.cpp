@@ -27,6 +27,9 @@ float rpmScaling;
 
 void setupRpm(){
     if (config.pinRpm == 255) return; // skip when pin is not defined
+    if (DISABLE_PULLS) {
+        gpio_disable_pulls(config.pinRpm); //disable pullup/pulldown on rpm pin
+    }
     setupRpmPio( );
     rpmScaling = 1000000.0 * config.rpmMultiplicator; // 1000000 = nbr of microsec in a sec
     //printf("RPM is set up\n");
