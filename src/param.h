@@ -108,6 +108,7 @@ void printConfigOffsets();
 void printFieldValues();
 void printPwmValues();
 
+void fillConfigWithDefault();
 void dumpConfig();
 
 // for sequencer
