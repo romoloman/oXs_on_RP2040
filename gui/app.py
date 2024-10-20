@@ -60,44 +60,44 @@ defaultConfig = """
 [DEFAULT]
 protocol = Frsky (Sport)
 crsfbaud = 115200
-cbprim = False
+cbprim = True
 pri= 5
 cbsec = False
-sec = 1
-cbtlm = False
-tlm = 0
+sec = 255
+cbtlm = True
+tlm = 4
 cbsbusout = False
 sbus_out = 0
 Failsafe = Hold
-cbgps = False
-gps_tx = 0
-gps_rx = 0
+cbgps = True
+gps_tx = 2
+gps_rx = 1
 gps = Ublox configured by oXs
-cbi2c = False
-scl = 3
-sda = 2
+cbi2c = True
+scl = 15
+sda = 10
 cbVspeedSource = False
 acc = 1
-cbrpm = False
-rpm = 0
+cbrpm = True
+rpm = 9
 RPM_MULT = 1.0
-cbvolt1 = False
-V1 = 26
-Scale1 = 1.0
-offset1 = 0.0
-cbvolt2 = False
-v2 = 26
-Scale2 = 1.0
-Offset2 = 0.0
-cbvolt3 = False
-V3 = 26
-Scale3 = 1.0
-Offset3 = 0.0
+cbvolt1 = True
+V1 = 28
+Scale1 = 6.85637
+offset1 = 68.563683
+cbvolt2 = True
+v2 = 27
+Scale2 = 53.47593
+Offset2 = 90528.0
+cbvolt3 = True
+V3 = 29
+Scale3 = 0.1
+Offset3 = 50
 cbvolt4 = False
 V4 = 26
 Scale4 = 1.0
 Offset4 = 0.0
-cbtemp1 = False
+cbtemp1 = True
 cbtemp2 = False
 cbesc = False
 Esc_pin = 0
@@ -219,7 +219,8 @@ class Ui(QtWidgets.QMainWindow):
         # set the title
         self.setWindowTitle("Graphical user interface for oXs on RP2040 " + version)
         self.show()
-
+        self.resetConfig()
+        
     def fillEditWithCmd(self, index):
         self.plainTextEditSerialToOxs.clear()
         self.plainTextEditSerialToOxs.appendPlainText(cmdCode[index])
@@ -235,7 +236,7 @@ class Ui(QtWidgets.QMainWindow):
             return
         cmd = "SAVE\n\r"
         self.plainTextEditSerialToOxs.clear()
-        self.plainTextEditSerialToOxs.appendPlainText(cmd)
+        # self.plainTextEditSerialToOxs.appendPlainText(cmd)
         self.m_serial.write(str(cmd).encode('utf-8'))
 
     def getOxsConfig(self):
@@ -544,8 +545,7 @@ class Ui(QtWidgets.QMainWindow):
     #    self.plainTextEditSerialToOxs.appendPlainText(cmd)
 
     def generateUsbCommand(self):    
-        cmd = "DEFAULT"
-        cmd += "; PROTOCOL=" + protocolsCode[self.comboBoxProtocol.currentIndex()]
+        cmd = "PROTOCOL=" + protocolsCode[self.comboBoxProtocol.currentIndex()]
         if self.comboBoxProtocol.currentText() == "ELRS":
             cmd += "; CRSFBAUD=" + str(self.doubleSpinBoxElrsBds.value())
         if self.cbPrim.isChecked():
