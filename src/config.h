@@ -102,14 +102,14 @@
 // V3 and V4 can be get using F125 or F1713 
 
 // here you can define the slot being used by different sensors
-#define SBUS2_SLOT_GPS_8  8   // this must be 8,16 or 24 because GPS requires 8 slots
-#define SBUS2_SLOT_VARIO_2 16 // Vario requires 2 lots (Alt and Vspeed)
-#define SBUS2_SLOT_BATTERY_3 18  // Battery requires 3 slots (volt, current, capacity)
-#define SBUS2_SLOT_TEMP1_1 21    // Temp1 requires 1 slot
-#define SBUS2_SLOT_TEMP2_1 22    // Temp2 requires 1 slot
+#define SBUS2_SLOT_GPS_8  8   // this must be 8,16 or 24 because GPS requires 8 slots emulates a SBS/01G
+#define SBUS2_SLOT_VARIO_2 16 // Vario requires 2 lots (Alt and Vspeed) emulates a F1672 or F1712
+#define SBUS2_SLOT_BATTERY_3 18  // Battery requires 3 slots (volt, current, capacity) emulates SBS/01C ; seems to the same as F-1678
+#define SBUS2_SLOT_TEMP1_1 21    // Temp1 requires 1 slot emulates a SBS/01T
+#define SBUS2_SLOT_TEMP2_1 22    // Temp2 requires 1 slot emulates a SBS/01T
 #define SBUS2_SLOT_RESERVE1_1 23    // V3 requires 1 slot, emulate F1713
 #define SBUS2_SLOT_RESERVE2_1 24    // V4 requires 1 slot, emulate F1713
-#define SBUS2_SLOT_RPM_1 25    // Rpm requires 1 slot
+#define SBUS2_SLOT_RPM_1 25    // Rpm requires 1 slot emulates a SBS/01RO or 01RM
 #define SBUS2_SLOT_AIRSPEED_1 26    // Airspeed requires ? slot
 
 #define SBUS2_SLOT_HOLD_COUNTER_1 28    // Count the number of hold frames ; require 1 slot; emulate F1713
@@ -195,7 +195,7 @@
 
 // --------- Parameter for RPM -------------------
 #define DISABLE_PULLS true
-#define RPM_COUNTER_INTERVAL_USEC 100000 // in usec (so 100000 = 100 msec)
+#define RPM_COUNTER_INTERVAL_USEC 1000000 // in usec (so 1000000 = 1 sec)
 
 // --------- Parameters for Ads1115 ----------------
 #define I2C_ADS_Add1 0x48 // I2C address of ads1115 when addr pin is connected to ground

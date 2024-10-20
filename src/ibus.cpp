@@ -121,7 +121,7 @@ uint8_t ibusTypes[NUMBER_MAX_IDX] = {  // list of ibus type in the same sequence
       IBUS_SENSOR_TYPE_PITCH,        //PITCH,       //      imu        in degree 
       IBUS_SENSOR_TYPE_ROLL,         //ROLL,        //       imu           in degree
       IBUS_SENSOR_TYPE_UNKNOWN,      //YAW ,        // not used to save data  in degree
-      IBUS_SENSOR_TYPE_RPM,          //RPM ,        //      RPM sensor    in Herzt
+      IBUS_SENSOR_TYPE_RPM,          //RPM ,        //      RPM sensor    in rpm
       IBUS_SENSOR_TYPE_EXTERNAL_VOLTAGE,      //ADS_1_1,      // Voltage provided by ads1115 nr 1 on pin 1
 
       IBUS_SENSOR_TYPE_EXTERNAL_VOLTAGE,      //ADS_1_2,      // Voltage provided by ads1115 nr 1 on pin 2    25
@@ -222,7 +222,7 @@ void setupListIbusFieldsToReply() {  // fill an array with the list of fields (f
       PITCH,       // IBUS_SENSOR_TYPE_PITCH     imu        in degree 
       ROLL,        // IBUS_SENSOR_TYPE_ROLL      imu           in degree
       YAW ,        // not used to save data  in degree
-      RPM ,        // IBUS_SENSOR_TYPE_RPM     RPM sensor    in Herzt
+      RPM ,        // IBUS_SENSOR_TYPE_RPM     RPM sensor    in rpm
       ADS_1_1,      // Voltage provided by ads1115 nr 1 on pin 1
 
       ADS_1_2,      // Voltage provided by ads1115 nr 1 on pin 2    25
@@ -454,7 +454,7 @@ bool formatIbusValue( uint8_t ibusAdr){
         //    value= fields[fieldId].value ; // from cm/sec to 0.1m/sec
         //    break;
         case GROUNDSPEED:
-            ibusValue= fields[fieldId].value * 36 /1000; // from cm/sec to km/sec
+            ibusValue= (fields[fieldId].value * 36) / 10; // from cm/sec to km/h
             break;            
         //case RPM:
         //    value= fields[fieldId].value *60 / 100 ; // from Hz to 100 tr/min???? not sure it is ok

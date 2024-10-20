@@ -16,7 +16,7 @@
 #include "hardware/flash.h"
 #include <inttypes.h>
 #include "stdlib.h"
-#include  "hardware/sync.h"
+#include "hardware/sync.h"
 #include "hardware/watchdog.h"
 #include "crsf_out.h"
 #include "pico/multicore.h"
@@ -1368,6 +1368,16 @@ int8_t handleOneCmd( char * bufferPos){ // handle one command with buffer starti
         saveConfig();
         saveSequencers();
         printf("config has been saved\n");  
+        printf("Device will reboot but it could be that a reset or a (power down + power on) is required\n\n");
+        watchdog_enable(1500,false);
+        sleep_ms(1000);
+        watchdog_reboot(0, 0, 100); // this force a reboot!!!!!!!!!!
+        sleep_ms(5000);
+        printf("oXs did not reboot after 5000 ms\n");
+    }   
+
+    // save the config
+    if ( strcmp("REBOOT", pkey) == 0 ) { 
         printf("Device will reboot but it could be that a reset or a (power down + power on) is required\n\n");
         watchdog_enable(1500,false);
         sleep_ms(1000);
