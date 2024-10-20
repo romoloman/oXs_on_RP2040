@@ -7940,7 +7940,7 @@ p, li { white-space: pre-wrap; }
          <string/>
         </property>
         <property name="pixmap">
-         <pixmap>rp2040.jpg</pixmap>
+         <pixmap>images/rp2040.jpg</pixmap>
         </property>
        </widget>
        <widget class="Line" name="line">

@@ -326,6 +326,11 @@ class Ui(QtWidgets.QMainWindow):
         config.sections()
         config.read_string(defaultConfig + self.strToParse)
         self.fillUi(config)        
+        self.cbRpm.setChecked(False)
+        self.cbVolt1.setChecked(False)            
+        self.cbVolt2.setChecked(False)            
+        self.cbVolt3.setChecked(False)            
+        self.cbVolt4.setChecked(False)            
 
         if "PRI =" in self.strToParse: self.cbPrim.setChecked(True)
         if "SEC =" in self.strToParse: self.cbSec.setChecked(True)
@@ -544,8 +549,9 @@ class Ui(QtWidgets.QMainWindow):
     #    self.plainTextEditSerialToOxs.clear()
     #    self.plainTextEditSerialToOxs.appendPlainText(cmd)
 
-    def generateUsbCommand(self):    
-        cmd = "PROTOCOL=" + protocolsCode[self.comboBoxProtocol.currentIndex()]
+    def generateUsbCommand(self):
+        cmd = "DEFAULT; "
+        cmd += "PROTOCOL=" + protocolsCode[self.comboBoxProtocol.currentIndex()]
         if self.comboBoxProtocol.currentText() == "ELRS":
             cmd += "; CRSFBAUD=" + str(self.doubleSpinBoxElrsBds.value())
         if self.cbPrim.isChecked():

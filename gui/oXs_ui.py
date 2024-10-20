@@ -2039,7 +2039,7 @@ class Ui_MainWindow(object):
         self.label_16 = QLabel(self.tab_4)
         self.label_16.setObjectName(u"label_16")
         self.label_16.setGeometry(QRect(400, -10, 221, 361))
-        self.label_16.setPixmap(QPixmap(u"../../../../Users/pc/.designer/backup/rp2040.jpg"))
+        self.label_16.setPixmap(QPixmap(u"images/rp2040.jpg"))
         self.line = QFrame(self.tab_4)
         self.line.setObjectName(u"line")
         self.line.setGeometry(QRect(440, 350, 20, 131))
