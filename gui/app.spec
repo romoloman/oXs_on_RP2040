@@ -8,7 +8,7 @@ a = Analysis(
     ['app.py'],
     pathex=[],
     binaries=[],
-    datas=[('oXs.ui', '.'), ('.\\rp2040.jpg', 'images/')],
+    datas=[('oXs.ui', '.'), ('.\\images\\app.ico', 'images/'), ('.\\images\\rp2040.jpg', 'images/')],
     hiddenimports=[],
     hookspath=[],
     hooksconfig={},
@@ -41,4 +41,5 @@ exe = EXE(
     target_arch=None,
     codesign_identity=None,
     entitlements_file=None,
+    icon=['images\\app.ico'],
 )

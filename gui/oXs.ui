@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>861</width>
-    <height>780</height>
+    <height>762</height>
    </rect>
   </property>
   <property name="palette">
@@ -49,6 +49,10 @@
   </property>
   <property name="windowTitle">
    <string>MainWindow</string>
+  </property>
+  <property name="windowIcon">
+   <iconset>
+    <normaloff>images/app.ico</normaloff>images/app.ico</iconset>
   </property>
   <widget class="QWidget" name="centralwidget">
    <layout class="QHBoxLayout" name="horizontalLayout_37">
@@ -1488,6 +1492,12 @@ p, li { white-space: pre-wrap; }
          </font>
         </property>
         <layout class="QHBoxLayout" name="horizontalLayout_9">
+         <property name="leftMargin">
+          <number>5</number>
+         </property>
+         <property name="rightMargin">
+          <number>5</number>
+         </property>
          <item>
           <widget class="QLabel" name="label_2">
            <property name="minimumSize">
@@ -1668,6 +1678,12 @@ p, li { white-space: pre-wrap; }
          </font>
         </property>
         <layout class="QHBoxLayout" name="horizontalLayout">
+         <property name="leftMargin">
+          <number>5</number>
+         </property>
+         <property name="rightMargin">
+          <number>5</number>
+         </property>
          <item>
           <widget class="QLabel" name="label_3">
            <property name="minimumSize">
@@ -2207,6 +2223,12 @@ p, li { white-space: pre-wrap; }
          </font>
         </property>
         <layout class="QHBoxLayout" name="horizontalLayout_2">
+         <property name="leftMargin">
+          <number>5</number>
+         </property>
+         <property name="rightMargin">
+          <number>5</number>
+         </property>
          <item>
           <widget class="QLabel" name="label_4">
            <property name="minimumSize">
@@ -2749,6 +2771,12 @@ p, li { white-space: pre-wrap; }
          </font>
         </property>
         <layout class="QHBoxLayout" name="horizontalLayout_11">
+         <property name="leftMargin">
+          <number>5</number>
+         </property>
+         <property name="rightMargin">
+          <number>5</number>
+         </property>
          <item>
           <widget class="QLabel" name="label_5">
            <property name="font">
@@ -2796,6 +2824,12 @@ p, li { white-space: pre-wrap; }
          </font>
         </property>
         <layout class="QHBoxLayout" name="horizontalLayout_4">
+         <property name="leftMargin">
+          <number>5</number>
+         </property>
+         <property name="rightMargin">
+          <number>5</number>
+         </property>
          <item>
           <widget class="QLabel" name="label_6">
            <property name="minimumSize">
@@ -3038,8 +3072,14 @@ p, li { white-space: pre-wrap; }
                 <property name="sizeConstraint">
                  <enum>QLayout::SetDefaultConstraint</enum>
                 </property>
+                <property name="leftMargin">
+                 <number>5</number>
+                </property>
                 <property name="topMargin">
                  <number>0</number>
+                </property>
+                <property name="rightMargin">
+                 <number>5</number>
                 </property>
                 <item>
                  <widget class="QLabel" name="label_8">
@@ -3051,7 +3091,7 @@ p, li { white-space: pre-wrap; }
                   </property>
                   <property name="maximumSize">
                    <size>
-                    <width>60</width>
+                    <width>10000</width>
                     <height>50</height>
                    </size>
                   </property>
@@ -3183,8 +3223,14 @@ p, li { white-space: pre-wrap; }
               </item>
               <item>
                <layout class="QHBoxLayout" name="horizontalLayout_6">
+                <property name="leftMargin">
+                 <number>5</number>
+                </property>
                 <property name="topMargin">
                  <number>0</number>
+                </property>
+                <property name="rightMargin">
+                 <number>5</number>
                 </property>
                 <item>
                  <widget class="QLabel" name="label_10">
@@ -3196,7 +3242,7 @@ p, li { white-space: pre-wrap; }
                   </property>
                   <property name="maximumSize">
                    <size>
-                    <width>60</width>
+                    <width>10000</width>
                     <height>16777215</height>
                    </size>
                   </property>
@@ -3325,8 +3371,14 @@ p, li { white-space: pre-wrap; }
                 <property name="spacing">
                  <number>7</number>
                 </property>
+                <property name="leftMargin">
+                 <number>5</number>
+                </property>
                 <property name="topMargin">
-                 <number>30</number>
+                 <number>0</number>
+                </property>
+                <property name="rightMargin">
+                 <number>5</number>
                 </property>
                 <item>
                  <widget class="QLabel" name="label_17">
@@ -3475,7 +3527,7 @@ p, li { white-space: pre-wrap; }
             <widget class="QWidget" name="layoutWidget">
              <property name="geometry">
               <rect>
-               <x>30</x>
+               <x>10</x>
                <y>30</y>
                <width>251</width>
                <height>171</height>
@@ -3483,16 +3535,18 @@ p, li { white-space: pre-wrap; }
              </property>
              <layout class="QVBoxLayout" name="verticalLayout_4">
               <item>
-               <widget class="QCheckBox" name="cbI2c">
-                <property name="text">
-                 <string>Use I2C</string>
-                </property>
-               </widget>
-              </item>
-              <item>
                <layout class="QHBoxLayout" name="horizontalLayout_3" stretch="0,0">
                 <property name="spacing">
                  <number>7</number>
+                </property>
+                <property name="leftMargin">
+                 <number>5</number>
+                </property>
+                <property name="topMargin">
+                 <number>0</number>
+                </property>
+                <property name="rightMargin">
+                 <number>5</number>
                 </property>
                 <item>
                  <widget class="QLabel" name="label_12">
@@ -3559,6 +3613,12 @@ p, li { white-space: pre-wrap; }
               </item>
               <item>
                <layout class="QHBoxLayout" name="horizontalLayout_7">
+                <property name="leftMargin">
+                 <number>5</number>
+                </property>
+                <property name="rightMargin">
+                 <number>5</number>
+                </property>
                 <item>
                  <widget class="QLabel" name="label_14">
                   <property name="minimumSize">
@@ -3622,6 +3682,13 @@ p, li { white-space: pre-wrap; }
                 </item>
                </layout>
               </item>
+              <item>
+               <widget class="QCheckBox" name="cbI2c">
+                <property name="text">
+                 <string>Use I2C</string>
+                </property>
+               </widget>
+              </item>
              </layout>
             </widget>
            </widget>
@@ -3636,7 +3703,7 @@ p, li { white-space: pre-wrap; }
               <rect>
                <x>13</x>
                <y>29</y>
-               <width>191</width>
+               <width>251</width>
                <height>161</height>
               </rect>
              </property>
@@ -3650,6 +3717,12 @@ p, li { white-space: pre-wrap; }
               </item>
               <item>
                <layout class="QHBoxLayout" name="horizontalLayout_13">
+                <property name="leftMargin">
+                 <number>5</number>
+                </property>
+                <property name="rightMargin">
+                 <number>5</number>
+                </property>
                 <item>
                  <widget class="QLabel" name="label">
                   <property name="enabled">
@@ -3768,6 +3841,12 @@ p, li { white-space: pre-wrap; }
               </item>
               <item>
                <layout class="QHBoxLayout" name="horizontalLayout_12">
+                <property name="leftMargin">
+                 <number>5</number>
+                </property>
+                <property name="rightMargin">
+                 <number>5</number>
+                </property>
                 <item>
                  <widget class="QLabel" name="label_9">
                   <property name="enabled">
@@ -3827,6 +3906,9 @@ p, li { white-space: pre-wrap; }
           </rect>
          </property>
          <layout class="QHBoxLayout" name="horizontalLayout_14">
+          <property name="rightMargin">
+           <number>5</number>
+          </property>
           <item>
            <widget class="QCheckBox" name="cbVolt1">
             <property name="text">
@@ -3950,6 +4032,9 @@ p, li { white-space: pre-wrap; }
           </rect>
          </property>
          <layout class="QHBoxLayout" name="horizontalLayout_15">
+          <property name="rightMargin">
+           <number>5</number>
+          </property>
           <item>
            <widget class="QCheckBox" name="cbVolt2">
             <property name="text">
@@ -4315,6 +4400,9 @@ p, li { white-space: pre-wrap; }
           </rect>
          </property>
          <layout class="QHBoxLayout" name="horizontalLayout_16">
+          <property name="rightMargin">
+           <number>5</number>
+          </property>
           <item>
            <widget class="QCheckBox" name="cbEsc">
             <property name="maximumSize">
@@ -7075,7 +7163,7 @@ p, li { white-space: pre-wrap; }
         </property>
         <property name="geometry">
          <rect>
-          <x>590</x>
+          <x>580</x>
           <y>110</y>
           <width>250</width>
           <height>22</height>
@@ -7101,7 +7189,7 @@ p, li { white-space: pre-wrap; }
         </property>
         <property name="geometry">
          <rect>
-          <x>590</x>
+          <x>580</x>
           <y>140</y>
           <width>250</width>
           <height>22</height>
@@ -7127,7 +7215,7 @@ p, li { white-space: pre-wrap; }
         </property>
         <property name="geometry">
          <rect>
-          <x>590</x>
+          <x>580</x>
           <y>170</y>
           <width>250</width>
           <height>22</height>
@@ -7153,7 +7241,7 @@ p, li { white-space: pre-wrap; }
         </property>
         <property name="geometry">
          <rect>
-          <x>590</x>
+          <x>580</x>
           <y>200</y>
           <width>250</width>
           <height>22</height>
